@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octra Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <img src="octralogo.jpg" alt="Octra Logo" class="logo-img">
+                <span class="logo-text">Octra Snake</span>
+            </div>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-label">Score:</span>
+                    <span id="score" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">High Score:</span>
+                    <span id="highScore" class="score-value">0</span>
+                </div>
+            </div>
+            <div class="sound-control">
+                <button id="soundButton" class="sound-btn">
+                    <span class="sound-icon">🔊</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+        <!-- Game Overlay -->
+        <div id="gameOverlay" class="overlay">
+            <div class="overlay-content">
+                <div class="mascot">
+                    <img src="octramaskot.jpeg" alt="Octra Mascot" class="mascot-img">
+                </div>
+                <div class="overlay-text">
+                    <h2 id="overlayTitle">Welcome to Octra Snake!</h2>
+                    <p id="overlayMessage">Press SPACE to start</p>
+                </div>
+                <div class="difficulty-selector">
+                    <p>Select Difficulty:</p>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn active" data-difficulty="medium">Medium</button>
+                        <button class="difficulty-btn" data-difficulty="fast">Fast</button>
+                        <button class="difficulty-btn" data-difficulty="super">Super</button>
+                    </div>
+                </div>
+                <div class="controls">
+                    <p>Use arrow keys or WASD to control the snake</p>
+                    <p>Collect Octra logos to grow and score points!</p>
+                </div>
+                <button id="startButton" class="start-button">PLAY</button>
+                <div class="developer-credit">
+                    <p>Developed by Knkchn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Overlay -->
+        <div id="shareOverlay" class="overlay hidden">
+            <div class="overlay-content">
+                <div class="mascot">
+                    <img src="octramaskot.jpeg" alt="Octra Mascot" class="mascot-img">
+                </div>
+                <div class="overlay-text">
+                    <h2>Game Over!</h2>
+                    <div class="final-score">
+                        <p>Your Score: <span id="finalScore">0</span></p>
+                        <p>High Score: <span id="shareHighScore">0</span></p>
+                    </div>
+                    <div class="share-section">
+                        <p>Share your score on X!</p>
+                    </div>
+                </div>
+                <div class="share-buttons">
+                    <button id="shareButton" class="share-button">
+                        <span class="share-icon">🐦</span> Share on X
+                    </button>
+                    <button id="playAgainButton" class="play-again-button">Play Again</button>
+                    <button id="mainMenuButton" class="main-menu-button">Main Menu</button>
+                </div>
+                <div class="developer-credit">
+                    <p>Developed by Knkchn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Octra Snake Game - Collect logos and grow your snake!</p>
+            <p class="developer">Developed by Knkchn</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+        <source src="background-music.wav" type="audio/wav">
+    </audio>
+</body>
+</html> 
